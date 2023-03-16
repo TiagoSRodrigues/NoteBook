@@ -50,4 +50,4 @@ jobs:
 ````
 
 ### sample gitflow:
-![alt example_gitflow]("https://github.com/TiagoSRodrigues/NoteBook/blob/main/github%20actions/assets/example_gitflow.png")
+![alt example_gitflow]("https://github.com/TiagoSRodrigues/NoteBook/blob/main/github%20actions/assets/example_gitflow")
