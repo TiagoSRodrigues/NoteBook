@@ -50,4 +50,4 @@ jobs:
 ````
 
 ### sample gitflow:
-    ![alt example_gitflow]("C:\Users\b27340\OneDrive - Novo Banco S.A\A++\NoteBook\NoteBook\github actions\assets\example_gitflow.png")
+    ![alt example_gitflow]("github actions\assets\example_gitflow.png")
