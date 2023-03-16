@@ -50,4 +50,28 @@ jobs:
 ````
 
 ### sample gitflow:
-![alt example_gitflow]("https://github.com/TiagoSRodrigues/NoteBook/blob/d49e0901a6bb92115f7c62e5506fca12f3c910a3/github%20actions/assets/example_gitflow.png)
+![alt example_gitflow](".\github actions\assets\example_gitflow")
+
+
+
+
+### Community Actions 
+
+Actions created and shared by github or the comunity
+
+can be found on the github marketplace (github.com/marketplace), or... in google
+
+interesting actions: 
+ - [Jira issue from TODO](https://github.com/marketplace/actions/jira-issue-from-todo)
+ - [Checkout](https://github.com/marketplace/actions/checkout)
+ - [Hashicorp Packer](https://github.com/marketplace/actions/setup-hashicorp-packer)
+
+## Custom Runners
+
+ - VM where jobs defined in a workflow are run ... in the defined environment
+ - It can be linux, windows, or mac
+ - It can run in a cloud, in a data center or a local workstation.
+ - the responsibility of security is of the infrastructure manager.
+ 
+
+
