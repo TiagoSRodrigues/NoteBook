@@ -1,51 +1,11 @@
-version: '3'
+--2023-08-23 23:31:16--  https://raw.githubusercontent.com/TiagoSRodrigues/NoteBook/main/OpenShift/docker-compose.yaml
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.108.133, 185.199.109.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 864 [text/plain]
+Saving to: ‘docker-compose.yaml.1’
 
-services:
+     0K                                                       100% 61.4M=0s
 
-  master-node:
-    image: openshift-rocky
-    container_name: master-node
-    tty: true
-    environment:
-      - ROLE=MASTER
-    networks:
-      okd-net:
-        ipv4_address: 172.40.1.1
-    volumes:
-      - master-data:/root
+2023-08-23 23:31:16 (61.4 MB/s) - ‘docker-compose.yaml.1’ saved [864/864]
 
-  worker-node1:
-    image: openshift-rocky
-    container_name: worker-node1
-    tty: true
-    environment:
-      - ROLE=WORKER
-    networks:
-      okd-net:
-        ipv4_address: 172.40.1.2
-    volumes:
-      - worker1-data:/root
-
-  worker-node2:
-    image: openshift-rocky
-    container_name: worker-node2
-    tty: true
-    environment:
-      - ROLE=WORKER
-    networks:
-      okd-net:
-        ipv4_address: 172.40.1.3
-    volumes:
-      - worker2-data:/root
-
-networks:
-  okd-net:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.40.0.0/16
-
-volumes:
-  master-data:
-  worker1-data:
-  worker2-data:

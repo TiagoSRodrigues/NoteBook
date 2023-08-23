@@ -15,16 +15,14 @@ create_dir_if_not_exists() {
 }
 
 create_dockerfile() {
-    content="
-FROM rockylinux:9.2
+    content="FROM rockylinux:9.2
 
 # Update repositories and install packages
-RUN yum update -y && \
-    yum install -y virt wget git net-tools bind bind-utils bash-completion rsync \
-                   libguestfs-tools virt-install epel-release libvirt-devel httpd-tools snf nginx && \
+RUN yum update -y &&
+    yum install -y virt wget git net-tools bind bind-utils bash-completion rsync libguestfs-tools virt-install epel-release libvirt-devel httpd-tools snf nginx &&
     yum clean all"
 
-    echo "$content" > Dockerfile
+    echo "$content" > /rocky/Dockerfile
     echo "Dockerfile created at $(pwd)"
 }
 
@@ -39,3 +37,5 @@ create_dockerfile
 
 docker build -t openshift-rocky .
 docker run -it openshift-rocky /bin/bash
+
+wget https://raw.githubusercontent.com/TiagoSRodrigues/NoteBook/main/OpenShift/docker-compose.yaml -o docker-compose.yaml
