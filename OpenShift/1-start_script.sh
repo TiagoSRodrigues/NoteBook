@@ -16,7 +16,7 @@ create_dir_if_not_exists() {
 
 # Call the function with "rocky" as the argument
 create_dir_if_not_exists "rocky-image"
-wget https://raw.githubusercontent.com/TiagoSRodrigues/NoteBook/main/OpenShift/references/Dockerfile -O opt/Dockerfile
+wget https://raw.githubusercontent.com/TiagoSRodrigues/NoteBook/main/OpenShift/references/rocky_dockerfile -O opt/Dockerfile
 
 docker build -t openshift-rocky .
 docker run -it openshift-rocky /bin/bash
