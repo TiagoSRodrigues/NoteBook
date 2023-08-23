@@ -14,26 +14,9 @@ create_dir_if_not_exists() {
     fi
 }
 
-create_dockerfile() {
-    content="FROM rockylinux:9.2
-
-# Update repositories and install packages
-RUN yum update -y &&
-    yum install -y virt wget git net-tools bind bind-utils bash-completion rsync libguestfs-tools virt-install epel-release libvirt-devel httpd-tools snf nginx &&
-    yum clean all"
-
-    echo "$content" > /rocky/Dockerfile
-    echo "Dockerfile created at $(pwd)"
-}
-
-# Call the function to create the Dockerfile
-create_dockerfile
-
-
-
 # Call the function with "rocky" as the argument
-create_dir_if_not_exists "rocky"
-create_dockerfile
+create_dir_if_not_exists "rocky-image"
+wget https://raw.githubusercontent.com/TiagoSRodrigues/NoteBook/main/OpenShift/references/Dockerfile -O opt/Dockerfile
 
 docker build -t openshift-rocky .
 docker run -it openshift-rocky /bin/bash
