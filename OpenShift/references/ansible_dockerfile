@@ -1,0 +1,15 @@
+FROM ubuntu:latest
+
+# Install Ansible and other dependencies
+RUN apt-get update && \
+    apt-get install -y software-properties-common && \
+    apt-add-repository --yes --update ppa:ansible/ansible && \
+    apt-get install -y ansible sshpass
+
+# Set the working directory
+WORKDIR /ansible
+
+# Copy your Ansible playbooks, roles, and configurations if needed
+# COPY ./playbooks /ansible/playbooks
+
+CMD [ "ansible-playbook", "--version" ]
