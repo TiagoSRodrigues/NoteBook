@@ -1,19 +1,31 @@
 # Github Actions
 
-## *Concepts*:
+#What is Github Actions:
 
-    Workdflow
+**Continuous Integration Solution* - Can trigger workflows bases on pushs pull requests and other events ox execute, build, test and deply tasks 
+**Managed service** by Github, so there is no configuring, patching, and updating of insfrastructure
+**Supported by Community Libraries**
+
+
+## Anatomy of an Action:
+
+    Workflow
         Collenction of jogs that run based on a specific trigger. Conceptually, is a CI pipeline. 
         wokflows are defined in yaml
     
     Runner: 
-        Compute machine where workflows are axecuted. These can be GitHub-managed runners or custom runners.
+        Compute machine where workflows are executed. These can be GitHub-managed runners or custom runners.
     
     Job:
         Set of steps that execute in a single runner workspace
     
     Step:
-        Lowest unit of funcionality for GitHub Actions. can me a command, a script, a JavaScript file, a Dockerfile, or a community action.
+        Lowest unit of functionality for GitHub Actions. can me a command, a script, a JavaScript file, a Dockerfile, or a community action.
+    
+
+
+
+
     
     CI: 
         Continuous integration
