@@ -1,0 +1,28 @@
+{
+    "connections": [
+        {
+            "info": {
+                "role": "",
+                "SavePassword": "false",
+                "OracleConnectionType": "BASIC",
+                "PROXY_TYPE": "USER NAME",
+                "RaptorConnectionType": "Oracle",
+                "serviceName": "freepdb1",
+                "customUrl": "jdbc:oracle:thin:@//localhost:1521/freepdb1",
+                "oraDriverType": "thin",
+                "NoPasswordConnection": "TRUE",
+                "hostname": "localhost",
+                "driver": "oracle.jdbc.OracleDriver",
+                "subtype": "oraJDBC",
+                "port": "1521",
+                "OS_AUTHENTICATION": "false",
+                "IS_PROXY": "false",
+                "KERBEROS_AUTHENTICATION": "false",
+                "user": "admin",
+                "PROXY_USER_NAME": ""
+            },
+            "name": "teste",
+            "type": "jdbc"
+        }
+    ]
+}

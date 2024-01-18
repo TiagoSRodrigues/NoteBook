@@ -1,0 +1,22 @@
+version: '3'
+services:
+  oracle-db:
+    container_name: oracle_db
+    image: container-registry.oracle.com/database/free:latest  # Using the latest tag as per documentation
+    ports:
+      - "1521:1521"  # Port mapping
+    environment:
+      - ORACLE_ALLOW_REMOTE=true
+      - ORACLE_CHARACTERSET=AL32UTF8
+      - ENABLE_ARCHIVELOG=true
+      - ORACLE_PWD=oracle  # Defina sua própria senha segura
+    restart: unless-stopped
+    volumes:
+      - oracle-data:/opt/oracle/oradata  # Volume for database data persistence
+      # Optional: volumes for startup and setup scripts
+      # - ./path-to-startup-scripts:/opt/oracle/scripts/startup
+      # - ./path-to-setup-scripts:/opt/oracle/scripts/setup
+
+
+volumes:
+  oracle-data:  # Define the volume for data persistence
